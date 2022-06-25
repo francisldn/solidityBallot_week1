@@ -6,6 +6,7 @@
   * Delegate my vote passing user address as input and using the wallet in environment
   * Query voting result and print to console
 
+<hr />
 
 <h3> Deploy </h3>
 
