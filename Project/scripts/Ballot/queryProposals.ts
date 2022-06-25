@@ -3,7 +3,9 @@ import "dotenv/config";
 import * as ballotJson from "../../artifacts/contracts/Ballot.sol/Ballot.json";
 // eslint-disable-next-line node/no-missing-import
 import { Ballot } from "../../typechain";
+import ballot from "../../registry.json";
 
+const ballotAddress = ballot.ballotAddress;
 // This key is already public on Herong's Tutorial Examples - v1.03, by Dr. Herong Yang
 // Do never expose your keys like this
 const EXPOSED_KEY = process.env.PRIVATE_KEY;
@@ -21,8 +23,6 @@ async function main() {
   if (balance < 0.01) {
     throw new Error("Not enough ether");
   }
-  if (process.argv.length < 3) throw new Error("Ballot address missing");
-  const ballotAddress = process.argv[2];
   console.log(
     `Attaching ballot contract interface to address ${ballotAddress}`
   );
