@@ -23,12 +23,12 @@ yarn run ts-node --files ./scripts/Ballot/deployment.ts "arg1" "arg2" "arg3"
   * Attach ballot interface to ballot contract address
 
 ```
-yarn run ts-node --files ./scripts/Ballot/queryProposals.ts "0x943d5271763e765727538AF7494309FC94C0B0DF"
+yarn run ts-node --files ./scripts/Ballot/queryProposals.ts 
 ```
   * Query the number of proposals, through public variable ``proposalCounter``
   * Loop through the proposals array and get proposal struct through reading ``proposals`` array
 
-<img src="./delegateVote.png" alt="delegate vote image"/>
+<img src="./queryProposals.png" alt="query proposal image"/>
 
 <hr />
 
