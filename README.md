@@ -1,7 +1,7 @@
 # Ballot Solidity Contract
 EncodeClub Bootcamp - Week 1
 
-## Team Members
+## Group 16 members
 ```
 Francis_ldn#7100
 Yerin#6129
