@@ -77,8 +77,8 @@ yarn run ts-node --files ./scripts/Ballot/castVote.ts "0x4522f1b2539Cbc97d1233c9
 <h3>Query voting result and print to console</h3>
 
   * Query winning proposal index (function ``winningProposal()``) and name (function ``winnerName()``)
-  * winningProposal() returns index(type: BigNumber), converted into number 
-  * winnerName returns byte32 data, converted into string using ``ethers.utils.parseBytes32String()``
+  * ``winningProposal()`` returns index(type: BigNumber), converted into number 
+  * ``winnerName()`` returns byte32 data, converted into string using ``ethers.utils.parseBytes32String()``
 
 ```
 yarn run ts-node --files ./scripts/Ballot/QueryVotingResult.ts 
