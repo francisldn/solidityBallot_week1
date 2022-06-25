@@ -67,6 +67,8 @@ yarn run ts-node --files ./scripts/Ballot/castVote.ts "1"
 yarn run ts-node --files ./scripts/Ballot/castVote.ts "0x4522f1b2539Cbc97d1233c9da4BAbb2B1Ee6F55B"
 
 ```
+<img src="./delegateVote.png" alt="delegate vote image">
+
 <hr />
 
 <h3>Query voting result and print to console</h3>
@@ -79,3 +81,4 @@ yarn run ts-node --files ./scripts/Ballot/castVote.ts "0x4522f1b2539Cbc97d1233c9
 yarn run ts-node --files ./scripts/Ballot/QueryVotingResult.ts 
 
 ```
+<img src="./queryResult.png" alt="query result image">
