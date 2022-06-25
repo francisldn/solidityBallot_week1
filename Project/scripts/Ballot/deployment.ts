@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 import "dotenv/config";
 import * as ballotJson from "../../artifacts/contracts/Ballot.sol/Ballot.json";
-
+import fs from "fs";
 // This key is already public on Herong's Tutorial Examples - v1.03, by Dr. Herong Yang
 // Do never expose your keys like this
 const EXPOSED_KEY = process.env.PRIVATE_KEY;
@@ -45,9 +45,22 @@ async function main() {
     convertStringArrayToBytes32(proposals)
   );
   console.log("Awaiting confirmations");
-  await ballotContract.deployed();
+  const tx = await ballotContract.deployed();
   console.log("Completed");
   console.log(`Contract deployed at ${ballotContract.address}`);
+  console.log("Transaction hash: ", tx.deployTransaction.hash);
+  // write contract address to a json file
+  const registry = {
+    tx: "Deploy",
+    ballotAddress: ballotContract.address,
+    network: "ropsten",
+    txHash: tx.deployTransaction.hash,
+  };
+  const data = JSON.stringify(registry);
+  fs.writeFile("registry.json", data, (err: any) => {
+    if (err) throw err;
+    console.log("Contract address written to file");
+  });
 }
 
 main().catch((error) => {
