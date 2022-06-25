@@ -46,7 +46,7 @@ yarn run ts-node --files ./scripts/Ballot/giveVotingRights.ts "0x4522f1b2539Cbc9
   * 1st argument - proposal index: 1 (proposal "arg2")
   * Note that if an address has voted it cannot delegate voting right (``require(!sender.voted, "You already voted.)``)
   * Execute voting using function ``vote(uint256 proposal)``
-  * Successfully voting for the 1st proposal ("arg2") with index 1
+  * Successfully voted for the 1st proposal ("arg2") with index 1
   * Transaction hash: ``0x3d975a46cb1dc4fe49530fdd3c4dca2a4e8d8cb13964249a1abb8dc37274c2ae``
 ```
 yarn run ts-node --files ./scripts/Ballot/castVote.ts "1"
@@ -61,6 +61,7 @@ yarn run ts-node --files ./scripts/Ballot/castVote.ts "1"
   * If an address has voted, it cannot delegate voting right (``require(!sender.voted, "You already voted.)``)
   * An address cannot delegate voting right to itself (``require(to != msg.sender, "Self-delegation is disallowed)``)
   * Execute the delegation of voting right using function ``delegate(address to)``
+  * Successfully delegated voting rights to the address above
   * Transaction hash: ``0xd53c127e71e68d88183cd116ef5fc5be500d6900db023effcd49d952c47be2b6``
 ```
 yarn run ts-node --files ./scripts/Ballot/castVote.ts "0x4522f1b2539Cbc97d1233c9da4BAbb2B1Ee6F55B"
