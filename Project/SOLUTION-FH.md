@@ -27,6 +27,9 @@ yarn run ts-node --files ./scripts/Ballot/queryProposals.ts "0x943d5271763e76572
 ```
   * Query the number of proposals, through public variable ``proposalCounter``
   * Loop through the proposals array and get proposal struct through reading ``proposals`` array
+
+<img src="./delegateVote.png" alt="delegate vote image"/>
+
 <hr />
 
 <h3>Give voting right passing an address as input</h3>
@@ -67,7 +70,7 @@ yarn run ts-node --files ./scripts/Ballot/castVote.ts "1"
 yarn run ts-node --files ./scripts/Ballot/castVote.ts "0x4522f1b2539Cbc97d1233c9da4BAbb2B1Ee6F55B"
 
 ```
-<img src="./delegateVote.png" alt="delegate vote image">
+<img src="./delegateVote.png" alt="delegate vote image"/>
 
 <hr />
 
@@ -81,4 +84,4 @@ yarn run ts-node --files ./scripts/Ballot/castVote.ts "0x4522f1b2539Cbc97d1233c9
 yarn run ts-node --files ./scripts/Ballot/QueryVotingResult.ts 
 
 ```
-<img src="./queryResult.png" alt="query result image">
+<img src="./queryResult.png" alt="query result image"/>
